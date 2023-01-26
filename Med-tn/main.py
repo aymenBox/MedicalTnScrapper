@@ -10,8 +10,8 @@ if __name__=="__main__":
     driver.get("https://www.med.tn/pharmacie/2")
     print("web page loaded")
     #testing geting divs
-    divs = driver.find_elements(By.CLASS_NAME,"list__label--name")
-    print(divs[0].text)
+    divs = driver.find_elements(By.CLASS_NAME,"card-doctor-block")
+    print(divs)
     for i in divs:
-        print(i.text)
+        print(i.find_element(By.CLASS_NAME,"list__label--name").text)
     pass
